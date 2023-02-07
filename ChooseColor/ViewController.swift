@@ -18,21 +18,39 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var viewLabel: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupView()
     }
 
     @IBAction func changeRedValue() {
         redValueLabel.text = String(format: "%.2f", redSlider.value)
+        
+        changeBackgroundColor()
     }
     
     @IBAction func changeGreenValue() {
         greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+        
+        changeBackgroundColor()
     }
     
     @IBAction func changeBlueValue() {
         blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+        
+        changeBackgroundColor()
+    }
+    
+    func setupView() {
+        viewLabel.layer.cornerRadius = 12
+        
+        changeBackgroundColor()
+    }
+    
+    func changeBackgroundColor() {
+        viewLabel.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: CGFloat(1))
     }
     
 }

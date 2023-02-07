@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xlx-Yj-yFa">
-                                <rect key="frame" x="16" y="79" width="361" height="106"/>
+                                <rect key="frame" x="16" y="237" width="361" height="106"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="eTP-ub-WSd">
                                         <rect key="frame" x="0.0" y="0.0" width="58.333333333333336" height="106"/>
@@ -97,13 +97,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-iP-SN7">
+                                <rect key="frame" x="16" y="79" width="361" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xlx-Yj-yFa" secondAttribute="trailing" constant="16" id="7eU-kI-tEz"/>
+                            <constraint firstItem="AsO-iP-SN7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.150235" id="H9e-g4-Std"/>
+                            <constraint firstItem="AsO-iP-SN7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vn3-RQ-JV3"/>
                             <constraint firstItem="xlx-Yj-yFa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eIQ-OQ-GKN"/>
-                            <constraint firstItem="xlx-Yj-yFa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="npt-nR-d9F"/>
+                            <constraint firstItem="AsO-iP-SN7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hF1-Ng-PAl"/>
+                            <constraint firstItem="xlx-Yj-yFa" firstAttribute="top" secondItem="AsO-iP-SN7" secondAttribute="bottom" constant="30" id="kPY-n1-VCk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AsO-iP-SN7" secondAttribute="trailing" constant="16" id="sR0-b0-Au9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -113,6 +121,7 @@
                         <outlet property="greenValueLabel" destination="l3k-iW-Ve4" id="fgt-MD-ru6"/>
                         <outlet property="redSlider" destination="RF4-U9-nPK" id="5xi-XG-XSC"/>
                         <outlet property="redValueLabel" destination="Y9D-V7-jQC" id="ODm-bz-L8G"/>
+                        <outlet property="viewLabel" destination="AsO-iP-SN7" id="JTp-NU-dzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,6 +135,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
