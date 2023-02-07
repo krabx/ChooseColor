@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
     
-    
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
@@ -27,30 +26,30 @@ class ViewController: UIViewController {
 
     @IBAction func changeRedValue() {
         redValueLabel.text = String(format: "%.2f", redSlider.value)
-        
         changeBackgroundColor()
     }
     
     @IBAction func changeGreenValue() {
         greenValueLabel.text = String(format: "%.2f", greenSlider.value)
-        
         changeBackgroundColor()
     }
     
     @IBAction func changeBlueValue() {
         blueValueLabel.text = String(format: "%.2f", blueSlider.value)
-        
         changeBackgroundColor()
     }
     
     func setupView() {
         viewLabel.layer.cornerRadius = 12
-        
         changeBackgroundColor()
     }
     
     func changeBackgroundColor() {
-        viewLabel.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: CGFloat(1))
+        viewLabel.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: CGFloat(1))
     }
     
 }
