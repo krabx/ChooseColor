@@ -39,12 +39,12 @@ class ViewController: UIViewController {
         changeBackgroundColor()
     }
     
-    func setupView() {
+    private func setupView() {
         viewLabel.layer.cornerRadius = 12
         changeBackgroundColor()
     }
     
-    func changeBackgroundColor() {
+    private func changeBackgroundColor() {
         viewLabel.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
