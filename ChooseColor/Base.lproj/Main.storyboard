@@ -124,7 +124,7 @@
                         <outlet property="greenValueLabel" destination="l3k-iW-Ve4" id="fgt-MD-ru6"/>
                         <outlet property="redSlider" destination="RF4-U9-nPK" id="5xi-XG-XSC"/>
                         <outlet property="redValueLabel" destination="Y9D-V7-jQC" id="ODm-bz-L8G"/>
-                        <outlet property="viewLabel" destination="AsO-iP-SN7" id="JTp-NU-dzK"/>
+                        <outlet property="viewColor" destination="AsO-iP-SN7" id="JTp-NU-dzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

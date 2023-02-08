@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    @IBOutlet var viewLabel: UIView!
+    @IBOutlet var viewColor: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +40,12 @@ final class ViewController: UIViewController {
     }
     
     private func setupView() {
-        viewLabel.layer.cornerRadius = 12
+        viewColor.layer.cornerRadius = 12
         changeBackgroundColor()
     }
     
     private func changeBackgroundColor() {
-        viewLabel.backgroundColor = UIColor(
+        viewColor.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
